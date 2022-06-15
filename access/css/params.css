@@ -23,6 +23,15 @@
     /* flex-grow: 1; */
 }
 
+.flex-fill-col {
+    /* align-self: stretch; */
+    width: 100%;
+}
+
+.flex-fill-row {
+    flex-grow: 1;
+}
+
 .one-string {
     white-space: nowrap;
     overflow: hidden;
