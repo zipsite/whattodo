@@ -6,6 +6,7 @@
 
 @import "normalise.css";
 
+@import "global.css";
 
 @import "params.css";
 @import "components.css";

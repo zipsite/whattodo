@@ -1,4 +1,28 @@
-.color-container {
+/* check-elem */
 
+.check-elem-close .maybe-hide {
+    display: none;
 }
+.check-elem-close > :first-child > :first-child {
+    flex-direction: row;
+}
+.check-elem-close> :first-child {
+    padding: 0;
+    border-radius: 0;
+    background-color:unset;
+}
+.check-elem-close .elem1 {
+    order: 1;
+    width: min-content;
+}
+.check-elem-close .elem2 {
+    order: 2;
+}
+.check-elem-close .elem3 {
+    order: 3;
+    width: min-content;
+}
+
+
+
 

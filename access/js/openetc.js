@@ -1,3 +1,5 @@
-let etcbox = document.getElementById("etc");
+let etcbox = document.getElementById("etcbox");
 
-let ectboxclose = ;
+etcbox.addEventListener("click", (e) => {
+    e.currentTarget.classList.toggle("check-elem-close");
+});
