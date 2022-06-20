@@ -9,6 +9,6 @@ export class ScreenManager {
         import(`../activity/${activityName}.js`).then(this.handlerModule.bind(this));
     }
     handlerModule (module) {
-        this.screen.setwindow(module.default);
+        this.screen.setwindow(module.default, this);
     }
 }

@@ -1,10 +1,10 @@
 import { StandActivity } from "../classes/stand-activity.js";
 
-export default class mainActivity extends StandActivity {
-    constructor(screennode) {
-        super(screennode);
-        console.log("mainActivity start");
-        this.loadElem("twowindow");
+export default class SecondActivity extends StandActivity {
+    constructor(screennode, manager) {
+        super(screennode, manager);
+        console.log("Activity start");
+        this.loadElemAsinc("twowindow");
     }
 
     hundlerRequest(Request) {
