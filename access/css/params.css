@@ -91,7 +91,7 @@
 
 .trans * {
     transition-property:all;
-    transition-duration: 5000ms;
+    transition-duration: 64ms;
     transition-timing-function: ease-out;
     transition-delay: 0s;
 }

@@ -1,27 +1,45 @@
 /* check-elem */
 
-.check-elem-close .maybe-hide {
-    display: none;
+
+.check-elem-close .maybe-row {
+    flex-direction:row-reverse;
 }
-.check-elem-close > :first-child > :first-child {
-    flex-direction: row;
-}
-.check-elem-close> :first-child {
+.check-elem-close > :first-child {
     padding: 0;
     border-radius: 0;
     background-color:unset;
 }
-.check-elem-close .elem1 {
+.check-elem-open .elem1 {
+    order: 2;
+}
+.check-elem-open .elem2 {
+    order: 3;
+}
+.check-elem-open .elem3 {
     order: 1;
+}
+.check-elem-open .elem4 {
+    order: 4;
+}
+.check-elem-close .elem1 {
+    order: 3;
     width: min-content;
 }
 .check-elem-close .elem2 {
     order: 2;
 }
 .check-elem-close .elem3 {
-    order: 3;
+    order: 1;
     width: min-content;
 }
+.check-elem-close .elem4 {
+    order: 4;
+}
+.check-elem-close .maybe-hide {
+    display: none;
+}
+
+
 
 
 
