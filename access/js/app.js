@@ -10,4 +10,4 @@ import {ScreenManager} from "./classes/screen-manager.js";
 
 
 let manager = new ScreenManager(document.getElementById("body"));
-manager.insert("main-activity");
+manager.insert("login-activity");

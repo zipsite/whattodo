@@ -1,8 +1,8 @@
 import { webRequest } from "./webrequest.js";
 
 export class StandActivity {
-    constructor(screennode, manager) {
-        this.screennode = screennode;
+    constructor(screen, manager) {
+        this.screen = screen;
         this.xhr = new webRequest();
         this.manager = manager;
     }

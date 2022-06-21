@@ -8,5 +8,7 @@
 
 @import "global.css";
 
+@import "struct.css";
+
 @import "params.css";
 @import "components.css";
