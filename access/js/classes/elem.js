@@ -1,14 +1,9 @@
-export default class Button {
+export default class Elem {
     constructor (nameElem) {
         this.fragm = new DocumentFragment();
-        this.elem = document.createElement("div");
-        this.fragm.append(this.elem);
-        this.elem.insertAdjacentHTML('beforeend', this.loadElemSinc(nameElem));
-        this.placeholder = this.fragm.getElementById("placeholder-btn");
-    }
-
-    setDisplayText (text) {
-        this.placeholder.innerText = text;
+        this.box = document.createElement("div");
+        this.fragm.append(this.box);
+        this.box.insertAdjacentHTML('beforeend', this.loadElemSinc(nameElem));
     }
 
     loadElemSinc (layoutName) {
@@ -19,5 +14,4 @@ export default class Button {
             return request.responseText;
         }
     }
-
 }

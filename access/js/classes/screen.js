@@ -5,7 +5,7 @@ export class Screen {
         this.fragm = new DocumentFragment();
 
         this.screennode = document.createElement('div');
-        this.screennode.classList.add("full-x-y");
+        this.screennode.classList.add("full-x-y", "guest-box-col");
 
         this.fragm.prepend(this.screennode);
         console.log("Screen create");

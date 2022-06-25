@@ -39,6 +39,21 @@
     display: none;
 }
 
+.button-bar-icon {
+    background-color:rgba(0, 0, 0, 0);
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+}
+
+/* button-bar */
+.bar-active-icon {
+    background-color: var(--accent-color);
+    width: 64px;
+    height: 32px;
+    border-radius: 16px;
+}
+
 
 
 
