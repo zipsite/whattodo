@@ -31,6 +31,14 @@
     align-items: flex-start;
 }
 
+.normal-gap {
+    gap: 8px;
+}
+
+.smoall-gap {
+    gap: 4px;
+}
+
 .guest-box-center {
     display: flex;
     flex-direction: column;
@@ -44,6 +52,10 @@
 
 .fill-box {
     width: 100%;
+}
+
+.over-hidden {
+    overflow: hidden;
 }
 
 .full-x-y {
@@ -69,7 +81,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 24px;
 
     color: #37425C;
@@ -93,12 +105,6 @@
     color: #37425C;
 }
 
-.one-string {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: clip;
-}
-
 .fat-text {
     font-family: 'Roboto';
     font-style: normal;
@@ -108,15 +114,21 @@
     color: #37425C;
 }
 
+.one-string {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
 .icon {
     width: 24px;
     height: 24px;
     display: block;
 }
 
-.trans * {
+.trans * , .trans {
     transition-property:all;
-    transition-duration: 64ms;
+    transition-duration: 128ms;
     transition-timing-function: ease-out;
     transition-delay: 0s;
 }

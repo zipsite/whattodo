@@ -1,4 +1,4 @@
-import {ScreenManager} from "./classes/screen-manager.js";
+import ScreenManager from "./classes/screen-manager.js";
 
 // let woot = document.getElementById("body");
 // 
@@ -9,5 +9,6 @@ import {ScreenManager} from "./classes/screen-manager.js";
 // }
 
 
-let manager = new ScreenManager(document.getElementById("body"));
-manager.insert("login-activity");
+window.Manager = new ScreenManager(document.getElementById("body"));
+Manager.insert("login-activity");
+Manager.parentnode.prepend(Manager.elem);

@@ -1,20 +1,20 @@
 import { StandActivity } from "../classes/stand-activity.js";
-import BigHeader from "./big-header.js";
+import SimpleHeader from "./simple-header.js";
 import Button from "./icon-button.js";
 import InputText from "./input-text.js";
 
 export default class loginActivity extends StandActivity {
-    constructor(screen, manager) {
-        super(screen, manager);
+    constructor(parentNode, manager) {
+        super(parentNode, manager);
 
-        this.header = new BigHeader(this.screen.screennode,"elem/big-header");
+        this.header = new SimpleHeader(this.elem,"elem/big-header");
         this.header.setDisplayText("Вход");
 
-        this.screen.screennode.insertAdjacentHTML('beforeend',
+        this.elem.insertAdjacentHTML('beforeend',
         this.loadElemSinc('login-layout').responseText);
 
-        this.inputPlace = this.screen.fragm.getElementById("input-place");
-        this.btnPlace = this.screen.fragm.getElementById("btn-place");
+        this.inputPlace = this.fragm.getElementById("input-place");
+        this.btnPlace = this.fragm.getElementById("btn-place");
 
         this.emailInput = new InputText(this.inputPlace, "elem/input-text");
         this.passInput = new InputText(this.inputPlace, "elem/input-text");
@@ -30,7 +30,7 @@ export default class loginActivity extends StandActivity {
 
         this.btnLogin.elem.addEventListener('click', this.loginHundler.bind(this));
 
-        this.screen.pushWindow();
+        this.parentnode.prepend(this.elem);
     }
 
     loginHundler () {

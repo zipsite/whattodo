@@ -1,10 +1,16 @@
 import { webRequest } from "./webrequest.js";
 
 export class StandActivity {
-    constructor(screen, manager) {
-        this.screen = screen;
-        this.xhr = new webRequest();
+    constructor(parentnode, manager) {
+        this.parentnode = parentnode;
         this.manager = manager;
+        this.xhr = new webRequest();
+        
+        this.fragm = new DocumentFragment();
+
+        this.elem = document.createElement("div");
+        this.elem.classList.add("full-x-y", "guest-box-col");
+        this.fragm.append(this.elem);
     }
 
     loadElemAsinc (layoutName) {

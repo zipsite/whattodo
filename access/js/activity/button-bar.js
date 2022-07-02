@@ -1,10 +1,10 @@
 import Elem from "../classes/elem.js";
 
 export default class ButtonBar extends Elem {
-    constructor (screennode, nameElem) {
+    constructor (parentNode, nameElem) {
         super(nameElem);
 
-        this.screennode = screennode;
+        this.parentNode = parentNode;
 
         this.iconArr = [
             (this.fragm.getElementById("bar-home-icon")),
@@ -12,17 +12,20 @@ export default class ButtonBar extends Elem {
             (this.fragm.getElementById("bar-setting-icon"))
         ];
 
-        this.barHome = this.fragm.getElementById("bar-home");
-        this.barAll = this.fragm.getElementById("bar-all");
-        this.barSetting = this.fragm.getElementById("bar-setting");
+        this.btnArr = [
+            this.fragm.getElementById("bar-home"),
+            this.fragm.getElementById("bar-all"),
+            this.fragm.getElementById("bar-setting"),
+        ];
 
-        this.barHome.addEventListener("click", this.clickHundler.bind(this));
-        this.barAll.addEventListener("click", this.clickHundler.bind(this));
-        this.barSetting.addEventListener("click", this.clickHundler.bind(this));
+        for (let i = 0; i < this.btnArr.length; i++) {
+            this.btnArr[i].addEventListener("click", this.clickHundler.bind(this));
+        }
+
+        this.iconArr[0].classList.toggle("bar-active-icon", true);
 
         this.elem = this.box.childNodes[0];
-
-        this.screennode.append(this.elem);
+        this.parentNode.append(this.elem);
     }
     clickHundler (e) {
         let oneActive = (e.currentTarget.childNodes)[1];

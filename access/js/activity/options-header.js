@@ -1,12 +1,12 @@
 import Elem from "../classes/elem.js";
 
-export default class BigHeader extends Elem {
-    constructor(screennode, nameElem){
+export default class OptionsHeader extends Elem {
+    constructor(parentNode, nameElem){
         super(nameElem);
-        this.screennode = screennode;
+        this.parentNode = parentNode;
         this.headerH = this.fragm.getElementById("header-h");
         this.elem = this.box.childNodes[0];
-        this.screennode.append(this.elem);
+        this.parentNode.append(this.elem);
     }
 
     setDisplayText(text) {
