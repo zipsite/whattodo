@@ -1,6 +1,6 @@
 import { StandActivity } from "../classes/stand-activity.js";
-import DropDownListCheck from "./drop-down-list-check.js";
-import SimpleHeader from "./simple-header.js";
+import DropDownListCheck from "./elem/drop-down-list-check.js";
+import SimpleHeader from "./elem/simple-header.js";
 
 export default class SettingActivity extends StandActivity {
     constructor(parentnode, manager) {
@@ -21,21 +21,6 @@ export default class SettingActivity extends StandActivity {
 
         this.changeTheme = new DropDownListCheck(this.placeElement, 'elem/drop-down-list-check', this.arrVariants);
 
-        this.changeTheme.clickPlace.addEventListener('click', this.changeThemeHandler.bind(this));
-
-        this.changeTheme.setStatus('close');
-
         this.parentnode.append(this.elem);
-    }
-
-    changeThemeHandler() {
-        let status = this.changeTheme.getStatus();
-        if (status == 'open') {
-            
-            this.changeTheme.setStatus('close');
-        }
-        else if (status == 'close') {
-            this.changeTheme.setStatus('open');
-        }
     }
 }

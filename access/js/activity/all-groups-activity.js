@@ -1,5 +1,5 @@
 import { StandActivity } from "../classes/stand-activity.js";
-import SimpleHeader from "./simple-header.js";
+import SimpleHeader from "./elem/simple-header.js";
 
 export default class AllGroupsActivity extends StandActivity {
     constructor(parentnode, manager) {

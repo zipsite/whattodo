@@ -54,6 +54,10 @@
     border-radius: 16px;
 }
 
+/* Drop list */
+.drop-down-close .maybe-hide {
+    display: none;
+}
 
 
 

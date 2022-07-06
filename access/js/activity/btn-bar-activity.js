@@ -1,6 +1,6 @@
 import ScreenManager from "../classes/screen-manager.js";
 import { StandActivity } from "../classes/stand-activity.js";
-import ButtonBar from "./button-bar.js";
+import ButtonBar from "./elem/button-bar.js";
 
 export default class loginActivity extends StandActivity {
     constructor(parentNode, manager) {

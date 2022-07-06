@@ -1,7 +1,7 @@
 import { StandActivity } from "../classes/stand-activity.js";
-import SimpleHeader from "./simple-header.js";
-import Button from "./icon-button.js";
-import InputText from "./input-text.js";
+import SimpleHeader from "./elem/simple-header.js";
+import Button from "./elem/icon-button.js";
+import InputText from "./elem/input-text.js";
 
 export default class loginActivity extends StandActivity {
     constructor(parentNode, manager) {
