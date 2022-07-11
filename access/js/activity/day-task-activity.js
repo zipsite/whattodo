@@ -30,9 +30,9 @@ export default class DayTaskActivity extends StandActivity {
         let arrTask = [
             new Task('домашка', '', 'Школа', 'nocheck', '1', '1'),
             new Task('домашка', '', 'Школа', 'nocheck', '1', '1'),
-            new Task('домашка', '', 'Школа', 'nocheck', '1', '1'),
-            new Task('домашка', '', 'Школа', 'nocheck', '1', '1')
+            new Task('домашка', '', 'Школа', 'check', '1', '1'),
+            new Task('домашка', '', 'Школа', 'check', '1', '1')
         ];
-        this.elemList = new TaskList(this.placeNonComplete, arrTask);
+        this.elemList = new TaskList(this.placeNonComplete, this.placeComplete, arrTask);
     }
 }

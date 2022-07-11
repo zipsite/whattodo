@@ -1,10 +1,11 @@
 import TaskElem from "./task-elem.js";
 
 export default class TaskList {
-    constructor(parentNode, arrTask, checkTaskHandler, editTaskHandler) {
+    constructor(placeNonComplete, placeComplete, arrTask, checkTaskHandler, editTaskHandler) {
         this.checkTaskHandler = checkTaskHandler;
         this.editTaskHandler = editTaskHandler;
-        this.parentNode = parentNode;
+        this.placeNonComplete = placeNonComplete;
+        this.placeComplete = placeComplete;
         this.arrTask = arrTask;
         this.arrTaskElem = [];
 
@@ -12,8 +13,13 @@ export default class TaskList {
     }
 
     createElem() {
+        this.placeNonComplete.innerHTML = '';
+        this.placeComplete.innerHTML = '';
+        let parentNode;
         for (let i = 0; i < this.arrTask.length; i++) {
-            this.arrTaskElem[i] = new TaskElem(this.parentNode, 'elem/task-elem');
+            if (this.arrTask[i].getChecked() == 'nocheck') parentNode = this.placeNonComplete;
+            else if (this.arrTask[i].getChecked() == 'check') parentNode = this.placeComplete;
+            this.arrTaskElem[i] = new TaskElem(parentNode, 'elem/task-elem');
             this.arrTaskElem[i].setNameTask(this.arrTask[i].getName());
             this.arrTaskElem[i].setDescriptionTask(this.arrTask[i].getDescription());
             this.arrTaskElem[i].setGroupTask(this.arrTask[i].getGroup());
@@ -38,6 +44,7 @@ export default class TaskList {
             this.arrTask[elemId].setChecked('nocheck');
             this.arrTaskElem[elemId].setChecked(this.arrTask[elemId].getChecked());
         }
+        this.createElem()
     }
 
 

@@ -60,6 +60,15 @@
 }
 
 
+/* Select Input */
+.select-close .maybe-hide {
+    display: none;
+}
+
+.selected-elem {
+    background: rgba(118, 118, 118, 0.12);
+}
+
 
 
 

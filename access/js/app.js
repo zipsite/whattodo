@@ -10,5 +10,5 @@ import ScreenManager from "./classes/screen-manager.js";
 
 
 window.Manager = new ScreenManager(document.getElementById("body"));
-Manager.insert("btn-bar-activity");
+Manager.insert("login-activity");
 Manager.parentnode.prepend(Manager.elem);
